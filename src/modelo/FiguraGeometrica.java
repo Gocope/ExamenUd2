@@ -1,5 +1,7 @@
 package modelo;
 
+/* Gonzalo Conchouso Pérez */
+
 public class FiguraGeometrica {
 
     private int numLados;
@@ -11,11 +13,31 @@ public class FiguraGeometrica {
     }
 
 
+    public FiguraGeometrica() {
+    }
+
+
     public FiguraGeometrica(int numLados, String nombre) throws Exception {
         if (numLados < MIN_NUMBER) {
             throw new Exception("El número de lados debe ser mayor que " + MIN_NUMBER);
         }
         this.numLados = numLados;
+        this.nombre = nombre;
+    }
+
+    public int getNumLados() {
+        return this.numLados;
+    }
+
+    public void setNumLados(int numLados) {
+        this.numLados = numLados;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
